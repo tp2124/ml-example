@@ -1,2 +1,2 @@
 # ml-example
- Messing around with ML.NET for the fisrt time.
+ Messing aroundn with ML.NET for the first time.
