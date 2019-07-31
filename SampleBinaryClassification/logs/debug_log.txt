@@ -1,0 +1,55 @@
+Inferring Columns ...
+Creating Data loader ...
+Loading data ...
+Exploring multiple ML algorithms and settings to find you the best model for ML task: binary-classification
+For further learning check: https://aka.ms/mlnet-cli
+|     Trainer                              Accuracy      AUC    AUPRC  F1-score  Duration #Iteration             |
+[Source=AutoML, Kind=Trace] Channel started
+[Source=AutoML, Kind=Trace] Evaluating pipeline xf=TextFeaturizing{ col=SentimentText_tf:SentimentText} xf=ColumnCopying{ col=Features:SentimentText_tf} xf=Normalizing{ col=Features:Features} tr=AveragedPerceptronBinary{}  cache=+
+Inferring Columns ...
+Creating Data loader ...
+Loading data ...
+Exploring multiple ML algorithms and settings to find you the best model for ML task: binary-classification
+For further learning check: https://aka.ms/mlnet-cli
+|     Trainer                              Accuracy      AUC    AUPRC  F1-score  Duration #Iteration             |
+[Source=AutoML, Kind=Trace] Channel started
+[Source=AutoML, Kind=Trace] Evaluating pipeline xf=TextFeaturizing{ col=SentimentText_tf:SentimentText} xf=ColumnCopying{ col=Features:SentimentText_tf} xf=Normalizing{ col=Features:Features} tr=AveragedPerceptronBinary{}  cache=+
+[Source=AutoML, Kind=Trace] 1	0.729233109798801	00:00:02.2201941	xf=TextFeaturizing{ col=SentimentText_tf:SentimentText} xf=ColumnCopying{ col=Features:SentimentText_tf} xf=Normalizing{ col=Features:Features} tr=AveragedPerceptronBinary{}  cache=+
+|1    AveragedPerceptronBinary               0.7407   0.7706   0.8403    0.7742       2.2          0             |
+[Source=AutoML, Kind=Trace] Evaluating pipeline xf=TextFeaturizing{ col=SentimentText_tf:SentimentText} xf=ColumnCopying{ col=Features:SentimentText_tf} xf=Normalizing{ col=Features:Features} tr=SdcaLogisticRegressionBinary{}  cache=+
+[Source=AutoML, Kind=Trace] 2	0.686510348566596	00:00:03.0934522	xf=TextFeaturizing{ col=SentimentText_tf:SentimentText} xf=ColumnCopying{ col=Features:SentimentText_tf} xf=Normalizing{ col=Features:Features} tr=SdcaLogisticRegressionBinary{}  cache=+
+|2    SdcaLogisticRegressionBinary           0.6842   0.8333   0.9550    0.7857       3.1          0             |
+[Source=AutoML, Kind=Trace] Evaluating pipeline xf=TextFeaturizing{ col=SentimentText_tf:SentimentText} xf=ColumnCopying{ col=Features:SentimentText_tf} tr=LightGbmBinary{}  cache=-
+[Source=AutoML, Kind=Trace] 3	0.673387619109857	00:00:03.4625341	xf=TextFeaturizing{ col=SentimentText_tf:SentimentText} xf=ColumnCopying{ col=Features:SentimentText_tf} tr=LightGbmBinary{}  cache=-
+|3    LightGbmBinary                         0.6471   0.6212   0.7253    0.7273       3.5          0             |
+[Source=AutoML, Kind=Trace] Evaluating pipeline xf=TextFeaturizing{ col=SentimentText_tf:SentimentText} xf=ColumnCopying{ col=Features:SentimentText_tf} xf=Normalizing{ col=Features:Features} tr=SymbolicSgdLogisticRegressionBinary{}  cache=+
+[Source=AutoML, Kind=Trace] 4	0.675193855277643	00:00:02.1489261	xf=TextFeaturizing{ col=SentimentText_tf:SentimentText} xf=ColumnCopying{ col=Features:SentimentText_tf} xf=Normalizing{ col=Features:Features} tr=SymbolicSgdLogisticRegressionBinary{}  cache=+
+|4    SymbolicSgdLogisticRegressionBinary    0.6667   0.6778   0.8756    0.7586       2.2          0             |
+[Source=AutoML, Kind=Trace] Evaluating pipeline xf=TextFeaturizing{ col=SentimentText_tf:SentimentText} xf=ColumnCopying{ col=Features:SentimentText_tf} xf=Normalizing{ col=Features:Features} tr=LinearSvmBinary{}  cache=+
+[Source=AutoML, Kind=Trace] 5	0.642222655187447	00:00:01.6693472	xf=TextFeaturizing{ col=SentimentText_tf:SentimentText} xf=ColumnCopying{ col=Features:SentimentText_tf} xf=Normalizing{ col=Features:Features} tr=LinearSvmBinary{}  cache=+
+|5    LinearSvmBinary                        0.6129   0.6807   0.7075    0.5385       1.7          0             |
+[Source=AutoML, Kind=Trace] Evaluating pipeline xf=TextFeaturizing{ col=SentimentText_tf:SentimentText} xf=ColumnCopying{ col=Features:SentimentText_tf} tr=FastTreeBinary{}  cache=-
+
+===============================================Experiment Results=================================================
+------------------------------------------------------------------------------------------------------------------
+|                                                     Summary                                                    |
+------------------------------------------------------------------------------------------------------------------
+|ML Task: binary-classification                                                                                  |
+|Dataset: wikipedia-detox-250-line-data.tsv                                                                      |
+|Label : Sentiment                                                                                               |
+|Total experiment time : 20.26 Secs                                                                              |
+|Total number of models explored: 5                                                                              |
+------------------------------------------------------------------------------------------------------------------
+|                                              Top 5 models explored                                             |
+------------------------------------------------------------------------------------------------------------------
+|     Trainer                              Accuracy      AUC    AUPRC  F1-score  Duration #Iteration             |
+|1    AveragedPerceptronBinary               0.7407   0.7706   0.8403    0.7742       2.2          1             |
+|2    SdcaLogisticRegressionBinary           0.6842   0.8333   0.9550    0.7857       3.1          2             |
+|3    SymbolicSgdLogisticRegressionBinary    0.6667   0.6778   0.8756    0.7586       2.2          4             |
+|4    LightGbmBinary                         0.6471   0.6212   0.7253    0.7273       3.5          3             |
+|5    LinearSvmBinary                        0.6129   0.6807   0.7075    0.5385       1.7          5             |
+------------------------------------------------------------------------------------------------------------------
+Generated trained model for consumption: C:\PersonalProjects\gitHub\ml-example\SampleBinaryClassification\SampleBinaryClassification.Model\MLModel.zip
+Retrieving best pipeline ...
+Generated C# code for model consumption: C:\PersonalProjects\gitHub\ml-example\SampleBinaryClassification\SampleBinaryClassification.ConsoleApp
+Check out log file for more information: C:\PersonalProjects\gitHub\ml-example\SampleBinaryClassification\logs\debug_log.txt

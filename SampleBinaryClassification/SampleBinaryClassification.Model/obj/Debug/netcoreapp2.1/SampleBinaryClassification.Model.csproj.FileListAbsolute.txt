@@ -1,0 +1,10 @@
+C:\PersonalProjects\gitHub\ml-example\SampleBinaryClassification\SampleBinaryClassification.Model\bin\Debug\netcoreapp2.1\MLModel.zip
+C:\PersonalProjects\gitHub\ml-example\SampleBinaryClassification\SampleBinaryClassification.Model\bin\Debug\netcoreapp2.1\SampleBinaryClassification.Model.deps.json
+C:\PersonalProjects\gitHub\ml-example\SampleBinaryClassification\SampleBinaryClassification.Model\bin\Debug\netcoreapp2.1\SampleBinaryClassification.Model.dll
+C:\PersonalProjects\gitHub\ml-example\SampleBinaryClassification\SampleBinaryClassification.Model\bin\Debug\netcoreapp2.1\SampleBinaryClassification.Model.pdb
+C:\PersonalProjects\gitHub\ml-example\SampleBinaryClassification\SampleBinaryClassification.Model\obj\Debug\netcoreapp2.1\SampleBinaryClassification.Model.csprojAssemblyReference.cache
+C:\PersonalProjects\gitHub\ml-example\SampleBinaryClassification\SampleBinaryClassification.Model\obj\Debug\netcoreapp2.1\SampleBinaryClassification.Model.csproj.CoreCompileInputs.cache
+C:\PersonalProjects\gitHub\ml-example\SampleBinaryClassification\SampleBinaryClassification.Model\obj\Debug\netcoreapp2.1\SampleBinaryClassification.Model.AssemblyInfoInputs.cache
+C:\PersonalProjects\gitHub\ml-example\SampleBinaryClassification\SampleBinaryClassification.Model\obj\Debug\netcoreapp2.1\SampleBinaryClassification.Model.AssemblyInfo.cs
+C:\PersonalProjects\gitHub\ml-example\SampleBinaryClassification\SampleBinaryClassification.Model\obj\Debug\netcoreapp2.1\SampleBinaryClassification.Model.dll
+C:\PersonalProjects\gitHub\ml-example\SampleBinaryClassification\SampleBinaryClassification.Model\obj\Debug\netcoreapp2.1\SampleBinaryClassification.Model.pdb
