@@ -4,7 +4,7 @@
         {
             "label": "Train Model",
             "command": "mlnet",
-            "type": "process",
+            "type": "shell",
             "args": [
                 "auto-train",
                 "--task",
@@ -15,6 +15,18 @@
                 "Sentiment",
                 "--max-exploration-time",
                 "10"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "Install ML.NET",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "tool",
+                "install",
+                "-g",
+                "mlnet"
             ],
             "problemMatcher": "$msCompile"
         },
@@ -30,7 +42,7 @@
             "options": {
                 "cwd": "${workspaceFolder}/consumeModelApp"
             },
-            "problemMatcher": "$msCompile"
+            "problemMatcher": "$msCompile",
         },
         {
             "label": "Add ML Package",
@@ -46,6 +58,9 @@
             "options": {
                 "cwd": "${workspaceFolder}/consumeModelApp"
             },
+            "group": "none",
+            "dependsOn":["Add Reference"],
+            "dependsOrder": "sequence",
             "problemMatcher": "$msCompile"
         },
         {
