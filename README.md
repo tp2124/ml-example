@@ -5,3 +5,4 @@ Following tutorial on https://dotnet.microsoft.com/learn/machinelearning-ai/ml-d
 
 ## Notes
 [ ] How do I add more data or correct results that are borked.
+Make sure to use the "Run Tasks" in VS Code.
