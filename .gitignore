@@ -1,3 +1,7 @@
-obj/*
-bin/*
+obj/
+bin/
 *.suo
+
+consumeModelApp/bin/
+consumeModelApp/obj/
+SampleBinaryClassification/
