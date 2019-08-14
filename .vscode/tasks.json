@@ -2,41 +2,71 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build",
-            "command": "dotnet",
+            "label": "Train Model",
+            "command": "mlnet",
             "type": "process",
             "args": [
-                "build",
-                "${workspaceFolder}/ml-example.csproj",
-                "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary"
+                "auto-train",
+                "--task",
+                "binary-classification",
+                "--dataset",
+                "wikipedia-detox-250-line-data.tsv",
+                "--label-column-name",
+                "Sentiment",
+                "--max-exploration-time",
+                "10"
             ],
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "publish",
+            "label": "Add Reference",
             "command": "dotnet",
             "type": "process",
             "args": [
-                "publish",
-                "${workspaceFolder}/ml-example.csproj",
-                "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary"
+                "add",
+                "reference",
+                "../SampleBinaryClassification/SampleBinaryClassification.Model/"
             ],
+            "options": {
+                "cwd": "${workspaceFolder}/consumeModelApp"
+            },
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "watch",
+            "label": "Add ML Package",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "add",
+                "package",
+                "Microsoft.ML",
+                "--version",
+                "1.0.0"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/consumeModelApp"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "Watch Dotnet Console Changes",
             "command": "dotnet",
             "type": "process",
             "args": [
                 "watch",
                 "run",
-                "${workspaceFolder}/ml-example.csproj",
+                "${workspaceFolder}/consumeModelApp/ml-example.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
-            "problemMatcher": "$msCompile"
+            "options": {
+                "cwd": "${workspaceFolder}/consumeModelApp"
+            },
+            "problemMatcher": "$msCompile",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }
