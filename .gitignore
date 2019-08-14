@@ -5,3 +5,4 @@ bin/
 consumeModelApp/bin/
 consumeModelApp/obj/
 SampleBinaryClassification/
+SampleBinaryClassification.Model/
